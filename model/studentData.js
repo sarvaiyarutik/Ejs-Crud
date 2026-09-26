@@ -23,10 +23,7 @@ const StudentSchema = new mongoose.Schema(
             default: ""
         },
 
-        status: {
-            type: Boolean,
-            default: true
-        },
+    
 
         created_date: {
             type: String

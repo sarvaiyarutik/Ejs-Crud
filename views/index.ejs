@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student List</title>
+
+</head>
+
+<body>
+
+    <h1>Student List</h1>
+
+    <a href="/student/add">Add Student</a>
+
+    <hr>
+
+    <% Student.forEach((student) => { %>
+
+        <div>
+
+            <h3>
+                Name: <%= student.name %>
+            </h3>
+
+            <p>
+                Email: <%= student.email %>
+            </p>
+
+            <p>
+                Phone: <%= student.phone %>
+            </p>
+
+            <p>
+                Image: <%= student.image %>
+            </p>
+
+            <p>
+                Status: <%= student.status %>
+            </p>
+
+            <a href="/student/getStudentById/<%= student._id %>">
+                Edit
+            </a>
+
+        </div>
+
+        <hr>
+
+    <% }) %>
+
+</body>
+
+</html>
